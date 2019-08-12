@@ -62,6 +62,35 @@
     
     
     <entry>
+      <title>静态路由</title>
+      <link href="/2018/10/24/2018-10-24-static-route/"/>
+      <url>/2018/10/24/2018-10-24-static-route/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p> XCNP学习笔记之静态路由</p></blockquote><a id="more"></a><p>#静态路由</p><h2 id="路由概念"><a href="#路由概念" class="headerlink" title="路由概念"></a>路由概念</h2><p>路由是指导IP报文转发的路径信息。</p><p>路由器转发数据包的关键是路由表。每个路由器中都保存着一张路由表，表中每条路由项都指明了数据包要到达某网络或某主机应通过路由器的哪个物理接口发送，以及可到达该路径的哪个下一个路由器，或者不再经过别的路由器而直接可以到达目的地。</p><p>路由表中包含了下列关键项：</p><p>目的地址（Destination）：用来标识IP包的目的地址或目的网络。<br>网络掩码（Mask）：在IP编址课程中已经介绍了网络掩码的结构和作用。同样，在路由表中网络掩码也具有重要的意义。IP地址和网络掩码进行“逻辑与”便可得到相应的网段信息。<br>输出接口（Interface）：指明IP包将从该路由器的哪个接口转发出去。<br>下一跳IP地址（NextHop）：指明IP包所经由的下一个路由器的接口地址。</p><h2 id="控制层面与数据层面"><a href="#控制层面与数据层面" class="headerlink" title="控制层面与数据层面"></a>控制层面与数据层面</h2><p>学习各种路由协议的时候，需要基于控制层面和数据层面进行分析和理解。</p><h3 id="控制层面："><a href="#控制层面：" class="headerlink" title="控制层面："></a>控制层面：</h3><p>针对路由协议而言，路由器通过路由协议学习路由形成路由表，为数据层面转发数据提供各种必要的信息。</p><p>控制层面的两个重要参数：</p><ol><li><p>管理距离（AD），通过不同的路由协议学习到同一条路由（网络地址和掩码一致）时，选择AD小的放到路由表里。</p><p><img src="https://i.loli.net/2018/10/25/5bd16f39f133a.png" alt="1540308529785.png"></p></li><li><p>度量值（Metric）,它用来衡量一条路径的好坏，当路由器学习到同一条路由具有相同AD时候，选择度量值小的放进路由表里。不通的路由协议，度量值的计算方法不一样。</p></li></ol><h3 id="数据层面："><a href="#数据层面：" class="headerlink" title="数据层面："></a>数据层面：</h3><p>针对发送数据而言，控制层面构建路由表，为数据层面转发数据提供服务。网络设备，对数据的各种具体的处理、转发过程都属于数据层面。</p><p>在数据层面，路由选路遵循最长匹配原则：路由器在转发数据时，需要选择路由表中的最优路由。当数据报文到达路由器时，路由器首先提取出报文的目的IP地址，然后查找路由表，将报文的目的IP地址与路由表中某表项的掩码字段做“与”操作，“与”操作后的结果跟路由表该表项的目的IP地址比较，相同则匹配上，否则就没有匹配上。 当与所有的路由表项都进行匹配后，路由器会选择一个掩码最长的匹配项。 </p><h2 id="路由分类"><a href="#路由分类" class="headerlink" title="路由分类"></a>路由分类</h2><p>静态路由：通过手工配置的路由。</p><p>直连路由：直接连到路由器上网络，设备自动加入路由表的路由。</p><p>动态路由：路由器学习到非直连网络的路由。</p><h2 id="静态路由出现在路由表中的条件"><a href="#静态路由出现在路由表中的条件" class="headerlink" title="静态路由出现在路由表中的条件"></a>静态路由出现在路由表中的条件</h2><ol><li>路由条目包含出接口，出接口的状态必须是UP UP状态，出接口必须有IP地址。</li><li>路由条目包含下一跳地址，下一跳地址要可达。</li></ol><h2 id="路由的递归表查询"><a href="#路由的递归表查询" class="headerlink" title="路由的递归表查询"></a>路由的递归表查询</h2><p>使用静态路由时，只配置了下一跳地址没有出接口时，路由器会先查找路由表，匹配了这条静态之后，再进行二次查表，确定出接口之后才能进行数据转发,这就是递归查询 。</p><p>路由的递归查询针对静态路由来讲，对于动态路由就没必要了。之所以要使用递归路由，目的是绕开那些经常变动的链路，可以使静态路由的配置工作量减小。</p><p>使用递归路由的一个条件：到达目标网络的链路在途中可以汇聚成比目标网络数量更少的链路。</p><p>路由器逐跳将数据包发送到目的地，静态路由可以指定到目的地的每一跳，但是如果路径上某个节点出现问题，整条静态路由就不能工作了，如果真的能用到静态路由，则需要管理员重新指定一条可以到达目的地的静态路由。</p><p><img src="https://i.loli.net/2018/10/25/5bd16f93c24fa.png" alt="1540311112843.png"></p><p>R1若想跟R4通信，R1必须拥有去往R4的静态路由，若简单的拓扑，若干条静态路由即可，若去往R4的链路有很多条，或者经常变动，则需要管理员经常写大量的静态路由来保证通信。此时为了减少工作量，就可以使用递归路由。</p><h2 id="浮动静态路由"><a href="#浮动静态路由" class="headerlink" title="浮动静态路由"></a>浮动静态路由</h2><p>在配置多条静态路由时，可以修改静态路由的管理距离，使一条静态路由的管理距离高于其他静态路由，从而实现静态路由的备份，也叫浮动静态路由。<br>RTB上配置了两条静态路由。正常情况下，这两条静态路由是等价的。通过配置路由的管理距离，使第二条静态路由的管理距离要高于第一条。路由器只把管理距离低的静态路由加入到路由表中。当加入到路由表中静态路由出现故障时，优先级高的静态路由才会加入到路由表并承担数据转发。</p><p><img src="https://i.loli.net/2018/10/25/5bd17008cf96f.png" alt="1540311806083.png"></p><p>IP地址可以按照自己的想法规划，以下内容是按照拓扑图进行配置的。为了实现双链路备份冗余，先将两条链路的静态路由配好，然后通过修改R2和R3两条链路路由管理距离，实现R2-R1-R3为主链路，R2-R4-3为备份链路。在R1和R3之间使用SLA来监测链路的连通性，在R2与R3的路由使用track跟踪机制，从而使R2-R1-R3链路不通时候，R2和R3的会在路路由表里删除主链路路由，从而使备份链路路由在R2和R3的路由加表，从实现数据转发切换到备份路径R2-R4-R3。 </p><p>R2接口配置： </p><p><img src="https://i.loli.net/2018/10/25/5bd1700319842.png" alt="1540311841847.png"></p><p>R1接口配置： </p><p><img src="https://i.loli.net/2018/10/25/5bd170092ea0a.png" alt="1540311877887.png"></p><p>R3接口配置： </p><p><img src="https://i.loli.net/2018/10/25/5bd170092f5e6.png" alt="1540311907896.png"></p><p>R4接口配置： </p><p><img src="https://i.loli.net/2018/10/25/5bd1700947249.png" alt="1540311953933.png"></p><p>PC5配置：</p><p><img src="https://i.loli.net/2018/10/25/5bd1700875ace.png" alt="1540311974240.png"></p><p>PC6配置：</p><p><img src="https://i.loli.net/2018/10/25/5bd1700887c96.png" alt="1540311988600.png"></p><p>各个路由器的静态路由如下：</p><p>R2：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ip route 192.168.35.0 255.255.255.0 Ethernet0/0 12.1.1.1 track 22</span><br><span class="line">ip route 13.1.1.0 255.255.255.0 Ethernet0/0 12.1.1.1</span><br><span class="line">ip route 34.1.1.0 255.255.255.0 Serial1/0 24.1.1.4</span><br><span class="line">ip route 192.168.35.0 255.255.255.0 Serial1/0 24.1.1.4 100</span><br></pre></td></tr></table></figure><p>R1 :</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ip route 172.16.24.0 255.255.255.0 Ethernet0/0 12.1.1.2</span><br><span class="line">ip route 192.168.35.0 255.255.255.0 Ethernet0/1 13.1.1.3</span><br></pre></td></tr></table></figure><p>R3:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ip route 172.16.24.0 255.255.255.0 Ethernet0/0 13.1.1.1 track 33</span><br><span class="line">ip route 12.1.1.0 255.255.255.0 Ethernet0/0 13.1.1.1</span><br><span class="line">ip route 24.1.1.0 255.255.255.0 Serial1/1 34.1.1.4</span><br><span class="line">ip route 172.16.24.0 255.255.255.0 Serial1/1 34.1.1.4 100</span><br></pre></td></tr></table></figure><p>R4:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ip route 172.16.24.0 255.255.255.0 Serial1/1 24.1.1.2</span><br><span class="line">ip route 192.168.35.0 255.255.255.0 Serial1/0 34.1.1.3</span><br></pre></td></tr></table></figure><p>在PC5到PC6用ping测试一下联通性（这里需要测试两次分别是主路径和备份路径的连通性）：</p><p><img src="https://i.loli.net/2018/10/25/5bd170e28eb8a.png" alt="1540312077460.png"></p><p>R2和R3的lsa和track配置如下：</p><p>R2:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">track 22 ip sla 12 reachability</span><br><span class="line">ip sla auto discovery</span><br><span class="line">ip sla 12</span><br><span class="line"> icmp-echo 13.1.1.3 source-ip 12.1.1.2</span><br><span class="line"> threshold 1000</span><br><span class="line"> timeout 2000</span><br><span class="line"> frequency 3</span><br><span class="line">ip sla schedule 12 life forever start-time now</span><br><span class="line">ip sla responder</span><br></pre></td></tr></table></figure><p>R3:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">track 33 ip sla 13 reachability</span><br><span class="line">ip sla auto discovery</span><br><span class="line">ip sla 13</span><br><span class="line"> icmp-echo 12.1.1.2 source-ip 13.1.1.3</span><br><span class="line"> threshold 1000</span><br><span class="line"> timeout 2000</span><br><span class="line"> frequency 3</span><br><span class="line">ip sla schedule 13 life forever start-time now</span><br><span class="line">ip sla responder</span><br></pre></td></tr></table></figure><p>测试一下LSA和track的运行状态：</p><p>R1一个接口不shutdown的时候（也就是R2-R1-R3主链路通的时候）：</p><p><img src="https://i.loli.net/2018/10/25/5bd170e2d0fac.png" alt="1540312115600.png"></p><p>当R1一个接口shutdown的时候（也就是R2-R1-R3主链路不通的时候）： </p><p><img src="https://i.loli.net/2018/10/25/5bd170e27306e.png" alt="1540312180587.png"></p><p>此时说明这部分配置没问题，接着就可以接下来路径切换实验了</p><p>主链路R2-R1-R3运行正常的时候：</p><p><img src="https://i.loli.net/2018/10/25/5bd170e2c876b.png" alt="1540312219007.png"></p><p>主链路不通，备份链路R2-R4-R3运行:</p><p><img src="https://i.loli.net/2018/10/25/5bd170e23c58c.png" alt="1540312273324.png"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 路由交换技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> RS </tag>
+            
+            <tag> 路由交换技术 </tag>
+            
+            <tag> 学习笔记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>《周鸿祎自述：我的互联网方法论》读后感</title>
       <link href="/2016/09/12/%E3%80%8A%E5%91%A8%E9%B8%BF%E7%A5%8E%E8%87%AA%E8%BF%B0%EF%BC%9A%E6%88%91%E7%9A%84%E4%BA%92%E8%81%94%E7%BD%91%E6%96%B9%E6%B3%95%E8%AE%BA%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F/"/>
       <url>/2016/09/12/%E3%80%8A%E5%91%A8%E9%B8%BF%E7%A5%8E%E8%87%AA%E8%BF%B0%EF%BC%9A%E6%88%91%E7%9A%84%E4%BA%92%E8%81%94%E7%BD%91%E6%96%B9%E6%B3%95%E8%AE%BA%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F/</url>
@@ -135,6 +164,35 @@
             <tag> MYSQL注入 </tag>
             
             <tag> 渗透测试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>使用burpsuite暴力破解webshell</title>
+      <link href="/2013/09/11/burpsuite-violent-cracking-webshell/"/>
+      <url>/2013/09/11/burpsuite-violent-cracking-webshell/</url>
+      
+        <content type="html"><![CDATA[<p>有一个朋友是 XXXX 理工大学的，跟我开玩笑说，有时间玩玩我们大学的网站，当时我手痒了，开始搞起。<br><a id="more"></a><br>开始在 google 上搜集 xxxx.edu.cn，输入语句 site: xxxx.edu.cn ，然后搜索出大量该网站的链接，初步判定是 asp或者 aspx 的。于是再次输入语句 site: xxxx.edu.cn  inurl:asp or aspx，进行第二次搜索，发现了好多URL带有 aspx?id=，随便找了几个链接，进行手工判断是否存在注入。发现存在注入，但是用了好多注入工具貌似效果不好，例如 sqlmap</p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Python sqlmap.py –u &lt;http://xxx.edu.cn/JYWeb/Main/Detail.aspx?ID=2007&gt; --dbs</span><br></pre></td></tr></table></figure><p><img src="https://i.loli.net/2018/11/23/5bf775371a7a9.png" alt="1.png"></p><p><img src="https://i.loli.net/2018/11/23/5bf77536ace6c.png" alt="2.png"></p><p>出现了这样符号和字母，当时我想当无语，继续</p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Python sqlmap.py –u &lt;http://xxx.edu.cn/JYWeb/Main/Detail.aspx?ID=2007&gt; –-current –db</span><br></pre></td></tr></table></figure><p>   <img src="https://i.loli.net/2018/11/23/5bf77537a7b31.png" alt="3.png"></p><p>对于这样的符号，很无语，很多工具貌似都不行。注入到此结束。</p><p>接着用御剑扫一下敏感信息或者后台什么来着，发现已经有前辈把这个站撸过了。</p><p> <img src="https://i.loli.net/2018/11/23/5bf775355c86a.png" alt="4.png"></p><p>   <img src="https://i.loli.net/2018/11/23/5bf774ebed90c.png" alt="5.png"></p><p>继续探访前辈的足迹，点开链接，直接是大马，OMGD！</p><p>   <img src="https://i.loli.net/2018/11/23/5bf774e87378c.png" alt="6.png"></p><p>当时手痒了，最近发现自己下了一款神器 burpsuite 没有用过，这次使用 burpsuite 暴力破解 webshell 就当练手了。将自己的浏览器代理设置为 127.0.0.1:8080@HTTP#Test，并使用，然后打开burpsuite，在前的 webshell 的 passwor d里面输入 123  点 login，burpsuite 自动截断当前网页。</p><p>   <img src="https://i.loli.net/2018/11/23/5bf775147c28e.png" alt="7.png"></p><p>然后点击 inruder ,清空所有 $ 符号，也就是清空所有变量，然后将设置 HRJ=§123§。</p><p>   <img src="https://i.loli.net/2018/11/23/5bf774e6842a9.png" alt="8.png"></p><p>接着载入爆破字典，并对其做好相关设置。</p><p>   <img src="https://i.loli.net/2018/11/23/5bf77528ecc6c.png" alt="9.png"></p><p>开始爆破了。</p><p>   <img src="https://i.loli.net/2018/11/23/5bf7753261ffd.png" alt="10.png"></p><p>到这里，仔细观察这么一条信息，就晓得爆破出密码了是 admin，直接就可以登录进去了。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 渗透测试 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MYSQL注入 </tag>
+            
+            <tag> 渗透测试 </tag>
+            
+            <tag> burpsuite </tag>
             
         </tags>
       

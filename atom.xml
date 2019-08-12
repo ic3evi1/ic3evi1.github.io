@@ -86,6 +86,32 @@
   </entry>
   
   <entry>
+    <title>静态路由</title>
+    <link href="http://yoursite.com/2018/10/24/2018-10-24-static-route/"/>
+    <id>http://yoursite.com/2018/10/24/2018-10-24-static-route/</id>
+    <published>2018-10-23T16:00:00.000Z</published>
+    <updated>2019-08-12T17:44:48.483Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt; XCNP学习笔记之静态路由&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="路由交换技术" scheme="http://yoursite.com/categories/%E8%B7%AF%E7%94%B1%E4%BA%A4%E6%8D%A2%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="RS" scheme="http://yoursite.com/tags/RS/"/>
+    
+      <category term="路由交换技术" scheme="http://yoursite.com/tags/%E8%B7%AF%E7%94%B1%E4%BA%A4%E6%8D%A2%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="学习笔记" scheme="http://yoursite.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>《周鸿祎自述：我的互联网方法论》读后感</title>
     <link href="http://yoursite.com/2016/09/12/%E3%80%8A%E5%91%A8%E9%B8%BF%E7%A5%8E%E8%87%AA%E8%BF%B0%EF%BC%9A%E6%88%91%E7%9A%84%E4%BA%92%E8%81%94%E7%BD%91%E6%96%B9%E6%B3%95%E8%AE%BA%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F/"/>
     <id>http://yoursite.com/2016/09/12/《周鸿祎自述：我的互联网方法论》读后感/</id>
@@ -148,6 +174,30 @@
       <category term="MYSQL注入" scheme="http://yoursite.com/tags/MYSQL%E6%B3%A8%E5%85%A5/"/>
     
       <category term="渗透测试" scheme="http://yoursite.com/tags/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用burpsuite暴力破解webshell</title>
+    <link href="http://yoursite.com/2013/09/11/burpsuite-violent-cracking-webshell/"/>
+    <id>http://yoursite.com/2013/09/11/burpsuite-violent-cracking-webshell/</id>
+    <published>2013-09-10T16:00:00.000Z</published>
+    <updated>2018-11-23T15:11:07.606Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;有一个朋友是 XXXX 理工大学的，跟我开玩笑说，有时间玩玩我们大学的网站，当时我手痒了，开始搞起。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="渗透测试" scheme="http://yoursite.com/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/"/>
+    
+    
+      <category term="MYSQL注入" scheme="http://yoursite.com/tags/MYSQL%E6%B3%A8%E5%85%A5/"/>
+    
+      <category term="渗透测试" scheme="http://yoursite.com/tags/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/"/>
+    
+      <category term="burpsuite" scheme="http://yoursite.com/tags/burpsuite/"/>
     
   </entry>
   
