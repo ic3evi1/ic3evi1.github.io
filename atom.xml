@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>进击的野草</title>
+  <icon>https://www.gravatar.com/avatar/b00c722c32c799da99ae8747a5c9f6f9</icon>
+  <subtitle>wildgr4ss&#39;s blog</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2018-11-11T16:31:08.302Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>wildgr4ss</name>
+    <email>me@gr4ss.club</email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>时间管理法则</title>
+    <link href="http://yoursite.com/2018/11/11/time-management-rule/"/>
+    <id>http://yoursite.com/2018/11/11/time-management-rule/</id>
+    <published>2018-11-10T17:53:55.000Z</published>
+    <updated>2018-11-11T16:31:08.302Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+      <category term="GTD" scheme="http://yoursite.com/categories/GTD/"/>
+    
+    
+      <category term="时间管理" scheme="http://yoursite.com/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/"/>
+    
+      <category term="思维导图" scheme="http://yoursite.com/tags/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/"/>
+    
+      <category term="hexo插件" scheme="http://yoursite.com/tags/hexo%E6%8F%92%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Jekyll博客添加Valine评论</title>
+    <link href="http://yoursite.com/2018/10/31/2018-10-31-jekyll-bolg-add-valine/"/>
+    <id>http://yoursite.com/2018/10/31/2018-10-31-jekyll-bolg-add-valine/</id>
+    <published>2018-10-30T16:00:00.000Z</published>
+    <updated>2018-11-10T19:31:38.153Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;关于github搭建jekyl博客，在这里不做过多描述，详情参考：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;百度搜索关键字：&lt;a href=&quot;https://www.baidu.com/s?ie=utf-8&amp;amp;f=8&amp;amp;rsv_bp=0&amp;amp;rsv_idx=1&amp;amp;tn=baidu&amp;amp;wd=github%E6%90%AD%E5%BB%BAjekyll%E5%8D%9A%E5%AE%A2&amp;amp;rsv_pq=cecac38b0002878a&amp;amp;rsv_t=362evSQHeS%2BnOn3iYGtNoUoaipbPHcEtIUUj%2BJ%2BgGxQVIN0EqkFglRaw0Eo&amp;amp;rqlang=cn&amp;amp;rsv_enter=1&amp;amp;rsv_sug3=2&amp;amp;rsv_sug1=1&amp;amp;rsv_sug7=001&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;github搭建jekyll博客&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;官网：&lt;a href=&quot;https://www.jekyll.com.cn&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.jekyll.com.cn&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我的博客用的模板是：&lt;a href=&quot;https://github.com/Simpleyyt/jekyll-theme-next&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;jekyll-theme-next&lt;/a&gt;，本篇文章就是基于这个模板添加的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;关于评论插件：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Disqus:  需要翻墙&lt;/li&gt;
+&lt;li&gt;网易云评论：需要自己的域名&lt;/li&gt;
+&lt;li&gt;Duoshuo:  挂了&lt;/li&gt;
+&lt;li&gt;gitment：逼格太高&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;其他评论插件没有用过，最后发现了Valine，一款快速、简洁且高效的无后端评论系统。&lt;br&gt;详情请访问官网：&lt;a href=&quot;https://valine.js.org&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://valine.js.org&lt;/a&gt;&lt;br&gt;这个评论系统是基于LeanCloud的，对Jekyll的博客是支持的，官网网址：&lt;a href=&quot;https://leancloud.cn&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://leancloud.cn&lt;/a&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="博客技术" scheme="http://yoursite.com/categories/%E5%8D%9A%E5%AE%A2%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="jekyll" scheme="http://yoursite.com/tags/jekyll/"/>
+    
+      <category term="github" scheme="http://yoursite.com/tags/github/"/>
+    
+      <category term="valine" scheme="http://yoursite.com/tags/valine/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《周鸿祎自述：我的互联网方法论》读后感</title>
+    <link href="http://yoursite.com/2016/09/12/%E3%80%8A%E5%91%A8%E9%B8%BF%E7%A5%8E%E8%87%AA%E8%BF%B0%EF%BC%9A%E6%88%91%E7%9A%84%E4%BA%92%E8%81%94%E7%BD%91%E6%96%B9%E6%B3%95%E8%AE%BA%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F/"/>
+    <id>http://yoursite.com/2016/09/12/《周鸿祎自述：我的互联网方法论》读后感/</id>
+    <published>2016-09-11T16:00:00.000Z</published>
+    <updated>2018-11-16T15:04:51.271Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近，看到微博上推崇了一本书《周鸿祎自述：我的互联网方法论》。我对这本书的名字很感兴趣，愉快地下载了一本，用kindle开始粗糙的看了几页。谁知道一下看上瘾了，在闲暇时光，把这本书通读了一遍。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="读书笔记" scheme="http://yoursite.com/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="心情随笔" scheme="http://yoursite.com/tags/%E5%BF%83%E6%83%85%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="读后感" scheme="http://yoursite.com/tags/%E8%AF%BB%E5%90%8E%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>离别心语</title>
+    <link href="http://yoursite.com/2015/01/13/2015-01-13-parting-heart/"/>
+    <id>http://yoursite.com/2015/01/13/2015-01-13-parting-heart/</id>
+    <published>2015-01-12T16:00:00.000Z</published>
+    <updated>2018-11-10T19:31:38.152Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;时间流逝，万物轮回。知耻而后勇，勇往直前。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="心情随笔" scheme="http://yoursite.com/categories/%E5%BF%83%E6%83%85%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="杂文" scheme="http://yoursite.com/tags/%E6%9D%82%E6%96%87/"/>
+    
+      <category term="心情随笔" scheme="http://yoursite.com/tags/%E5%BF%83%E6%83%85%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MYSQL手工注入某日本网站</title>
+    <link href="http://yoursite.com/2013/10/09/2013-10-09-manual-mysql-injection/"/>
+    <id>http://yoursite.com/2013/10/09/2013-10-09-manual-mysql-injection/</id>
+    <published>2013-10-08T16:00:00.000Z</published>
+    <updated>2018-11-10T19:31:38.150Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;经过一天的辛苦劳动下班了，实在无聊，QQ上的基友基本都挂机睡觉了。找点乐子打发时间，看了一下2013年OWASP Top Ten Project， Injection排在第一。去了解注入，还是有必要的。随便google了几个日本网站，发现不少都在注入点，有很多用手工都比较鸡肋，终于找到了一个比较满意的。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="渗透测试" scheme="http://yoursite.com/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/"/>
+    
+    
+      <category term="MYSQL注入" scheme="http://yoursite.com/tags/MYSQL%E6%B3%A8%E5%85%A5/"/>
+    
+      <category term="渗透测试" scheme="http://yoursite.com/tags/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>月夜</title>
+    <link href="http://yoursite.com/2008/11/20/2008-11-20-moonlit/"/>
+    <id>http://yoursite.com/2008/11/20/2008-11-20-moonlit/</id>
+    <published>2008-11-19T16:00:00.000Z</published>
+    <updated>2018-11-10T19:31:38.156Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt; 用一篇短篇小说回忆当年幼稚、青涩，白驹过隙，再也回不到过去。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="心情随笔" scheme="http://yoursite.com/categories/%E5%BF%83%E6%83%85%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="心情随笔" scheme="http://yoursite.com/tags/%E5%BF%83%E6%83%85%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="短篇小说" scheme="http://yoursite.com/tags/%E7%9F%AD%E7%AF%87%E5%B0%8F%E8%AF%B4/"/>
+    
+  </entry>
+  
+</feed>

