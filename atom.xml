@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>进击的野草</title>
-  <icon>https://www.gravatar.com/avatar/b00c722c32c799da99ae8747a5c9f6f9</icon>
+  <icon>https://www.gravatar.com/avatar/6f752f61dbb064da0788b1258332dbb4</icon>
   <subtitle>wildgr4ss&#39;s blog</subtitle>
   <link href="/atom.xml" rel="self"/>
   
@@ -11,7 +11,7 @@
   
   <author>
     <name>wildgr4ss</name>
-    <email>me@gr4ss.club</email>
+    <email>root@wildgrass.top</email>
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
